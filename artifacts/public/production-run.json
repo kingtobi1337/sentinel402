@@ -1,0 +1,327 @@
+{
+  "id": "5614876f-e2fd-49db-8e98-252ced35266f",
+  "accountId": "0.0.108869",
+  "depth": "deep",
+  "budgetTinybar": "600000",
+  "plannedCostTinybar": "600000",
+  "status": "completed",
+  "createdAt": "2026-07-23T20:49:34.109Z",
+  "updatedAt": "2026-07-23T20:49:41.188Z",
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-07-23T20:49:34.115Z",
+      "phase": "policy",
+      "title": "Procurement policy approved",
+      "detail": "deep dossier selected 3 tool(s) for 600000 tinybar within a 600000 tinybar budget."
+    },
+    {
+      "sequence": 2,
+      "at": "2026-07-23T20:49:34.115Z",
+      "phase": "http",
+      "title": "Tool requested",
+      "detail": "GET /api/tools/identity",
+      "toolId": "identity"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-07-23T20:49:34.129Z",
+      "phase": "payment",
+      "title": "402 Payment Required",
+      "detail": "HTTP 402 · 100000 tinybar requested",
+      "toolId": "identity"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-07-23T20:49:34.181Z",
+      "phase": "payment",
+      "title": "Exact payment signed",
+      "detail": "Buyer authorized the exact transfer; private key stayed server-side",
+      "toolId": "identity"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-07-23T20:49:36.341Z",
+      "phase": "payment",
+      "title": "Settlement confirmed",
+      "detail": "Hedera testnet settlement confirmed: 0.0.7162784@1784839766.309796545",
+      "toolId": "identity",
+      "transaction": "0.0.7162784@1784839766.309796545",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545"
+    },
+    {
+      "sequence": 6,
+      "at": "2026-07-23T20:49:36.341Z",
+      "phase": "evidence",
+      "title": "Identity Lens evidence accepted",
+      "detail": "0.0.108869 is active with 4403.66184047 HBAR.",
+      "toolId": "identity"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-07-23T20:49:36.342Z",
+      "phase": "http",
+      "title": "Tool requested",
+      "detail": "GET /api/tools/flow",
+      "toolId": "flow"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-07-23T20:49:36.346Z",
+      "phase": "payment",
+      "title": "402 Payment Required",
+      "detail": "HTTP 402 · 200000 tinybar requested",
+      "toolId": "flow"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-07-23T20:49:36.378Z",
+      "phase": "payment",
+      "title": "Exact payment signed",
+      "detail": "Buyer authorized the exact transfer; private key stayed server-side",
+      "toolId": "flow"
+    },
+    {
+      "sequence": 10,
+      "at": "2026-07-23T20:49:38.478Z",
+      "phase": "payment",
+      "title": "Settlement confirmed",
+      "detail": "Hedera testnet settlement confirmed: 0.0.7162784@1784839771.111800525",
+      "toolId": "flow",
+      "transaction": "0.0.7162784@1784839771.111800525",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-07-23T20:49:38.478Z",
+      "phase": "evidence",
+      "title": "Flow Lens evidence accepted",
+      "detail": "31 transactions in 60 minutes; net -0.86251746 HBAR.",
+      "toolId": "flow"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-07-23T20:49:38.478Z",
+      "phase": "http",
+      "title": "Tool requested",
+      "detail": "GET /api/tools/risk",
+      "toolId": "risk"
+    },
+    {
+      "sequence": 13,
+      "at": "2026-07-23T20:49:38.480Z",
+      "phase": "payment",
+      "title": "402 Payment Required",
+      "detail": "HTTP 402 · 300000 tinybar requested",
+      "toolId": "risk"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-07-23T20:49:38.487Z",
+      "phase": "payment",
+      "title": "Exact payment signed",
+      "detail": "Buyer authorized the exact transfer; private key stayed server-side",
+      "toolId": "risk"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-07-23T20:49:41.188Z",
+      "phase": "payment",
+      "title": "Settlement confirmed",
+      "detail": "Hedera testnet settlement confirmed: 0.0.7162784@1784839773.705495394",
+      "toolId": "risk",
+      "transaction": "0.0.7162784@1784839773.705495394",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394"
+    },
+    {
+      "sequence": 16,
+      "at": "2026-07-23T20:49:41.188Z",
+      "phase": "evidence",
+      "title": "Risk Jury evidence accepted",
+      "detail": "Deterministic risk verdict: LOW (0/100).",
+      "toolId": "risk"
+    },
+    {
+      "sequence": 17,
+      "at": "2026-07-23T20:49:41.188Z",
+      "phase": "complete",
+      "title": "Dossier complete",
+      "detail": "Every protected result has a confirmed Hedera testnet settlement receipt."
+    }
+  ],
+  "results": [
+    {
+      "toolId": "identity",
+      "generatedAt": "2026-07-23T20:49:34.520Z",
+      "subject": "0.0.108869",
+      "summary": "0.0.108869 is active with 4403.66184047 HBAR.",
+      "data": {
+        "accountId": "0.0.108869",
+        "active": true,
+        "balanceTinybar": "440366184047",
+        "balanceHbar": "4403.66184047",
+        "accountAgeDays": 2011,
+        "createdTimestamp": "1611012014.493796002",
+        "keyType": "ED25519",
+        "evmAddress": "0x000000000000000000000000000000000001a945",
+        "ethereumNonce": 0,
+        "receiverSignatureRequired": null,
+        "stakedAccountId": null,
+        "stakedNodeId": null,
+        "pendingRewardTinybar": "0"
+      },
+      "evidence": [
+        {
+          "label": "Hedera mainnet account record",
+          "url": "https://mainnet-public.mirrornode.hedera.com/api/v1/accounts/0.0.108869"
+        }
+      ],
+      "methodology": [
+        "Direct Mirror Node account lookup",
+        "Exact integer tinybar conversion",
+        "No aggregator or off-chain identity database"
+      ]
+    },
+    {
+      "toolId": "flow",
+      "generatedAt": "2026-07-23T20:49:36.786Z",
+      "subject": "0.0.108869",
+      "summary": "31 transactions in 60 minutes; net -0.86251746 HBAR.",
+      "data": {
+        "windowMinutes": 60,
+        "transactionCount": 31,
+        "successCount": 31,
+        "failureCount": 0,
+        "incomingTinybar": "0",
+        "outgoingTinybar": "86251746",
+        "netTinybar": "-86251746",
+        "chargedFeeTinybar": "86251746",
+        "typeCounts": {
+          "CRYPTOTRANSFER": 16,
+          "CONTRACTCALL": 15
+        },
+        "resultCounts": {
+          "SUCCESS": 31
+        },
+        "counterparties": [
+          {
+            "account": "0.0.802",
+            "appearances": 3,
+            "incomingTinybar": "0",
+            "outgoingTinybar": "86251746",
+            "totalTinybar": "86251746"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "label": "Hedera mainnet transaction page 1",
+          "url": "https://mainnet-public.mirrornode.hedera.com/api/v1/transactions?account.id=0.0.108869&timestamp=gte%3A1784836176&order=desc&limit=100"
+        }
+      ],
+      "methodology": [
+        "All Mirror Node pages inside the configured time window",
+        "Deduplicated by transaction id and nonce",
+        "Counterparties ranked by absolute native-HBAR flow"
+      ]
+    },
+    {
+      "toolId": "risk",
+      "generatedAt": "2026-07-23T20:49:38.864Z",
+      "subject": "0.0.108869",
+      "summary": "Deterministic risk verdict: LOW (0/100).",
+      "data": {
+        "score": 0,
+        "verdict": "low",
+        "accountAgeDays": 2011,
+        "transactionCount": 31,
+        "failureCount": 0,
+        "signals": [
+          {
+            "id": "deleted",
+            "points": 100,
+            "triggered": false,
+            "reason": "Account is deleted"
+          },
+          {
+            "id": "very-new",
+            "points": 25,
+            "triggered": false,
+            "reason": "Account is younger than 7 days"
+          },
+          {
+            "id": "new",
+            "points": 10,
+            "triggered": false,
+            "reason": "Account is younger than 30 days"
+          },
+          {
+            "id": "high-failure-ratio",
+            "points": 25,
+            "triggered": false,
+            "reason": "More than 25% of recent transactions failed"
+          },
+          {
+            "id": "receiver-signature",
+            "points": 5,
+            "triggered": null,
+            "reason": "Receiver signature is required"
+          },
+          {
+            "id": "unknown-key",
+            "points": 15,
+            "triggered": false,
+            "reason": "No standard account key is exposed"
+          }
+        ],
+        "disclaimer": "Heuristic evidence triage, not financial advice or proof of malicious control."
+      },
+      "evidence": [
+        {
+          "label": "Hedera mainnet account record",
+          "url": "https://mainnet-public.mirrornode.hedera.com/api/v1/accounts/0.0.108869"
+        },
+        {
+          "label": "Hedera mainnet transaction page 1",
+          "url": "https://mainnet-public.mirrornode.hedera.com/api/v1/transactions?account.id=0.0.108869&timestamp=gte%3A1784836178&order=desc&limit=100"
+        }
+      ],
+      "methodology": [
+        "Published additive signal weights",
+        "No hidden model or LLM judgment",
+        "Score is capped at 100 and every triggered signal is returned"
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "transaction": "0.0.7162784@1784839766.309796545",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "amountTinybar": "100000",
+      "toolId": "identity",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545"
+    },
+    {
+      "transaction": "0.0.7162784@1784839771.111800525",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "amountTinybar": "200000",
+      "toolId": "flow",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525"
+    },
+    {
+      "transaction": "0.0.7162784@1784839773.705495394",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "amountTinybar": "300000",
+      "toolId": "risk",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394"
+    }
+  ],
+  "summary": {
+    "purchasedTools": 3,
+    "spentTinybar": "600000",
+    "verdict": "low"
+  }
+}

@@ -23,11 +23,11 @@ The canonical live E2E purchased all three tools through x402 v2 `exact` HBAR pa
 
 | Tool | Price | Transaction | Mirror result |
 |---|---:|---|---|
-| Identity Lens | 100,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784837688-343089555) | `SUCCESS`, receiver +100,000 |
-| Flow Lens | 200,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784837695-405790134) | `SUCCESS`, receiver +200,000 |
-| Risk Jury | 300,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784837698-470813065) | `SUCCESS`, receiver +300,000 |
+| Identity Lens | 100,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545) | `SUCCESS`, receiver +100,000 |
+| Flow Lens | 200,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525) | `SUCCESS`, receiver +200,000 |
+| Risk Jury | 300,000 tinybar | [HashScan](https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394) | `SUCCESS`, receiver +300,000 |
 
-Machine-readable evidence: [`artifacts/public/testnet-e2e.json`](artifacts/public/testnet-e2e.json).
+Machine-readable production run: [`artifacts/public/production-run.json`](artifacts/public/production-run.json). The independent credentialed local gate is preserved at [`artifacts/public/testnet-e2e.json`](artifacts/public/testnet-e2e.json).
 
 Testnet participants:
 

@@ -22,9 +22,9 @@ TBD — must be under five minutes.
 
 ## HashScan proof
 
-- https://hashscan.io/testnet/transaction/0.0.7162784-1784837688-343089555
-- https://hashscan.io/testnet/transaction/0.0.7162784-1784837695-405790134
-- https://hashscan.io/testnet/transaction/0.0.7162784-1784837698-470813065
+- https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545
+- https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525
+- https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394
 
 ## Form fields still requiring owner input
 

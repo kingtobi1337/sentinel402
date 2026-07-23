@@ -39,9 +39,9 @@ Do not cut during settlement. The end-to-end wait is the proof.
 
 Open each HashScan receipt from the right-hand rail:
 
-- Identity: https://hashscan.io/testnet/transaction/0.0.7162784-1784837688-343089555
-- Flow: https://hashscan.io/testnet/transaction/0.0.7162784-1784837695-405790134
-- Risk: https://hashscan.io/testnet/transaction/0.0.7162784-1784837698-470813065
+- Identity: https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545
+- Flow: https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525
+- Risk: https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394
 
 Point out buyer `0.0.9706295`, receiver `0.0.9706314`, exact amounts, and `SUCCESS`.
 
