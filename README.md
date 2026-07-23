@@ -150,7 +150,10 @@ HEDERA_NETWORK=hedera:testnet
 FACILITATOR_URL=https://api.testnet.blocky402.com
 PAY_TO_ACCOUNT=0.0.xxxx
 HEDERA_BUYER_ACCOUNT_ID=0.0.yyyy
+# Local development only:
 HEDERA_BUYER_PRIVATE_KEY=...
+# Production alternative; mutually exclusive with direct env:
+# HEDERA_BUYER_PRIVATE_KEY_FILE=/run/secrets/sentinel402-buyer-key
 PUBLIC_BASE_URL=http://127.0.0.1:4021
 INTERNAL_BASE_URL=http://127.0.0.1:4021
 ```

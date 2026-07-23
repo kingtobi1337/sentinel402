@@ -1,4 +1,6 @@
 import "dotenv/config";
+import { readFileSync, statSync } from "node:fs";
+import { isAbsolute } from "node:path";
 import { parseAccountId } from "./domain.js";
 
 export type AppConfig = {
@@ -38,6 +40,19 @@ function httpUrl(name: string, fallback: string, allowLocal: boolean): string {
   return url.toString().replace(/\/$/, "");
 }
 
+function optionalSecret(name: string, fileName: string): string | undefined {
+  const direct = process.env[name]?.trim() || undefined;
+  const filePath = process.env[fileName]?.trim() || undefined;
+  if (direct && filePath) throw new Error(`${name} and ${fileName} are mutually exclusive`);
+  if (!filePath) return direct;
+  if (!isAbsolute(filePath)) throw new Error(`${fileName} must be an absolute path`);
+  const size = statSync(filePath).size;
+  if (size < 1 || size > 4_096) throw new Error(`${fileName} must contain between 1 and 4096 bytes`);
+  const value = readFileSync(filePath, "utf8").trim();
+  if (!value) throw new Error(`${fileName} is empty`);
+  return value;
+}
+
 export function loadConfig(): AppConfig {
   const port = integer("PORT", 4021, 1, 65_535);
   const network = process.env.HEDERA_NETWORK ?? "hedera:testnet";
@@ -48,9 +63,9 @@ export function loadConfig(): AppConfig {
   const payToAccount = parseAccountId(payToRaw);
 
   const buyerAccount = process.env.HEDERA_BUYER_ACCOUNT_ID;
-  const buyerKey = process.env.HEDERA_BUYER_PRIVATE_KEY;
+  const buyerKey = optionalSecret("HEDERA_BUYER_PRIVATE_KEY", "HEDERA_BUYER_PRIVATE_KEY_FILE");
   if ((buyerAccount && !buyerKey) || (!buyerAccount && buyerKey)) {
-    throw new Error("HEDERA_BUYER_ACCOUNT_ID and HEDERA_BUYER_PRIVATE_KEY must be set together");
+    throw new Error("HEDERA_BUYER_ACCOUNT_ID and a buyer private-key source must be set together");
   }
 
   const budgetText = process.env.DEMO_MAX_BUDGET_TINYBAR ?? "1000000";
