@@ -63,7 +63,7 @@ export function loadConfig(): AppConfig {
   const payToAccount = parseAccountId(payToRaw);
 
   const buyerAccount = process.env.HEDERA_BUYER_ACCOUNT_ID;
-  const buyerKey = optionalSecret("HEDERA_BUYER_PRIVATE_KEY", "HEDERA_BUYER_PRIVATE_KEY_FILE");
+  const buyerKey = optionalSecret("HEDERA_BUYER_PRIVATE_KEY", "HEDERA_BUYER_CREDENTIAL_FILE");
   if ((buyerAccount && !buyerKey) || (!buyerAccount && buyerKey)) {
     throw new Error("HEDERA_BUYER_ACCOUNT_ID and a buyer private-key source must be set together");
   }

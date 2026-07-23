@@ -153,7 +153,7 @@ HEDERA_BUYER_ACCOUNT_ID=0.0.yyyy
 # Local development only:
 HEDERA_BUYER_PRIVATE_KEY=...
 # Production alternative; mutually exclusive with direct env:
-# HEDERA_BUYER_PRIVATE_KEY_FILE=/run/secrets/sentinel402-buyer-key
+# HEDERA_BUYER_CREDENTIAL_FILE=/run/secrets/sentinel402-buyer-key
 PUBLIC_BASE_URL=http://127.0.0.1:4021
 INTERNAL_BASE_URL=http://127.0.0.1:4021
 ```
