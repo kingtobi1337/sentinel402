@@ -7,21 +7,32 @@
   <meta name="theme-color" content="#090b0c">
   <title>Sentinel402 — Autonomous agents buy evidence</title>
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/enhancements.css">
   <script src="/app.js" type="module"></script>
 </head>
 <body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 7 8 5-8 5V7Z"/></symbol>
+    <symbol id="i-fingerprint" viewBox="0 0 24 24"><path d="M7.5 9.5a5 5 0 0 1 9 3M5 13a7 7 0 0 1 13.7-2M8 14.5c.5 3.5-1 5-1 5M11 14c.5 4-1 7-1 7M14 13.5c1 4-.5 7.5-1.5 9M17 13c1 2.5.5 5-.5 7"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h3c4 0 3-6 7-6M10 12h2c3 0 2 6 5 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.3-8 10-4.8-1.7-8-5-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-ledger" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-verify" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 12 18 6M12 3v2M21 12h-2"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m9 6-6 6 6 6M15 6l6 6-6 6M14 3 10 21"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="12" cy="11" r="2"/><path d="m7 7 3.5 3M17.5 6.5 13.5 10M12 13v4M6 7.5l5 9.5M18 7l-5 10"/></symbol>
+  </svg>
   <div class="noise" aria-hidden="true"></div>
   <header class="nav shell">
-    <a class="brand" href="#top" aria-label="Sentinel402 home">
-      <span class="brand-mark">S/402</span>
-      <span class="brand-name">Sentinel402</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Sentinel402 home"><span class="brand-mark">S/402</span><span class="brand-name">Sentinel402</span></a>
     <div class="network-pill"><span class="status-dot"></span><span id="network-label">Hedera testnet</span></div>
     <nav>
-      <a href="#market">Tool market</a>
-      <a href="#recorder">Flight recorder</a>
-      <a href="/openapi.json">OpenAPI</a>
-      <a class="nav-cta" href="https://github.com/kingtobi1337/sentinel402">GitHub ↗</a>
+      <a href="#market">Tool market</a><a href="#recorder">Flight recorder</a><a href="#film">Protocol film</a><a href="/openapi.json">OpenAPI</a>
+      <a class="nav-cta" href="https://github.com/kingtobi1337/sentinel402">GitHub <svg class="icon"><use href="#i-external"/></svg></a>
     </nav>
   </header>
 
@@ -32,115 +43,84 @@
         <h1>An agent shouldn't subscribe.<br><em>It should buy the next fact.</em></h1>
         <p class="lede">Sentinel402 discovers narrowly priced forensic tools, buys only the evidence its policy needs, and returns one Hedera receipt for every result.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#terminal">Run the live buyer <span>→</span></a>
-          <a class="button ghost" href="/llms.txt">Read agent instructions</a>
+          <a class="button primary" href="#terminal">Run the live buyer <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="button ghost" href="/llms.txt"><svg class="icon"><use href="#i-code"/></svg> Read agent instructions</a>
         </div>
         <div class="proof-strip" aria-label="Protocol properties">
-          <div><strong>402</strong><span>HTTP-native</span></div>
-          <div><strong>Exact</strong><span>tinybar pricing</span></div>
-          <div><strong>0</strong><span>API keys</span></div>
-          <div><strong>1:1</strong><span>result / receipt</span></div>
+          <div><svg class="proof-icon"><use href="#i-radar"/></svg><strong>402</strong><span>HTTP-native</span></div>
+          <div><svg class="proof-icon"><use href="#i-ledger"/></svg><strong>Exact</strong><span>tinybar pricing</span></div>
+          <div><svg class="proof-icon"><use href="#i-lock"/></svg><strong>0</strong><span>API keys</span></div>
+          <div><svg class="proof-icon"><use href="#i-receipt"/></svg><strong>1:1</strong><span>result / receipt</span></div>
         </div>
       </div>
 
       <aside class="terminal-card reveal delay" id="terminal">
-        <div class="terminal-head">
-          <div><span class="terminal-kicker">PROCUREMENT CONSOLE</span><h2>Commission a dossier</h2></div>
-          <span class="live-chip" id="readiness-chip">checking</span>
-        </div>
+        <div class="terminal-head"><div><span class="terminal-kicker">PROCUREMENT CONSOLE</span><h2>Commission a dossier</h2></div><span class="live-chip" id="readiness-chip">checking</span></div>
         <form id="run-form">
           <label for="account">Hedera mainnet account</label>
-          <div class="input-wrap"><span>◎</span><input id="account" name="account" value="0.0.108869" required pattern="0\.0\.[0-9]+" autocomplete="off"></div>
+          <div class="input-wrap"><svg class="icon"><use href="#i-radar"/></svg><input id="account" name="account" value="0.0.108869" required pattern="0\.0\.[0-9]+" autocomplete="off"></div>
           <div class="form-grid">
-            <label>Depth
-              <select id="depth" name="depth">
-                <option value="quick">Quick · 1 tool</option>
-                <option value="standard">Standard · 2 tools</option>
-                <option value="deep" selected>Deep · 3 tools</option>
-              </select>
-            </label>
-            <label>Hard budget
-              <select id="budget" name="budget">
-                <option value="100000">0.001 HBAR</option>
-                <option value="300000">0.003 HBAR</option>
-                <option value="600000" selected>0.006 HBAR</option>
-                <option value="1000000">0.01 HBAR</option>
-              </select>
-            </label>
+            <label>Depth<select id="depth" name="depth"><option value="quick">Quick · 1 tool</option><option value="standard">Standard · 2 tools</option><option value="deep" selected>Deep · 3 tools</option></select></label>
+            <label>Hard budget<select id="budget" name="budget"><option value="100000">0.001 HBAR</option><option value="300000">0.003 HBAR</option><option value="600000" selected>0.006 HBAR</option><option value="1000000">0.01 HBAR</option></select></label>
           </div>
-          <button class="button primary full" type="submit" id="run-button">Authorize autonomous run <span>↗</span></button>
+          <button class="button primary full" type="submit" id="run-button">Authorize autonomous run <svg class="icon"><use href="#i-arrow"/></svg></button>
           <p class="form-note">The browser never sees a key. The server-side buyer can spend only within the selected testnet budget.</p>
         </form>
         <div class="terminal-error" id="terminal-error" role="alert" hidden></div>
       </aside>
     </section>
 
-    <section class="ticker" aria-label="Protocol flow">
-      <div>DISCOVER <b>→</b> POLICY <b>→</b> HTTP 402 <b>→</b> SIGN EXACT <b>→</b> FACILITATOR VERIFY <b>→</b> HEDERA SETTLE <b>→</b> EVIDENCE 200 <b>→</b> HASHSCAN PROOF</div>
+    <section class="ticker" aria-label="Protocol flow"><div>DISCOVER <b>→</b> POLICY <b>→</b> HTTP 402 <b>→</b> SIGN EXACT <b>→</b> FACILITATOR VERIFY <b>→</b> HEDERA SETTLE <b>→</b> EVIDENCE 200 <b>→</b> HASHSCAN PROOF</div></section>
+
+    <section class="protocol-film shell section" id="film">
+      <div class="film-copy">
+        <div><span class="section-number">00</span><span class="eyebrow-label">Protocol cinema</span></div>
+        <h2>Three facts enter.<br><em>One verified dossier leaves.</em></h2>
+        <p>Identity, flow and risk evidence cross an exact-payment verification gate before the final dossier is released.</p>
+        <div class="film-meta"><span><svg class="icon"><use href="#i-play"/></svg> 8 second film</span><span>Gemini Omni Flash</span><span>16:9</span></div>
+      </div>
+      <div class="film-stage">
+        <video autoplay muted loop playsinline preload="metadata" poster="/media/sentinel402-keyframe.webp" aria-label="Abstract visualization of evidence modules passing through an exact payment verification gate"><source src="/media/sentinel402-omni.mp4" type="video/mp4"></video>
+        <div class="film-scan" aria-hidden="true"></div><div class="film-corner top">LIVE PROTOCOL VISUAL / 001</div><div class="film-corner bottom">EVIDENCE → VERIFY → SETTLE → RELEASE</div>
+      </div>
+      <div class="production-proof" aria-label="Verified production settlements">
+        <div class="proof-title"><svg class="icon"><use href="#i-verify"/></svg><span>Production proof</span><strong>3 / 3 settled</strong></div>
+        <a href="https://hashscan.io/testnet/transaction/0.0.7162784-1784839766-309796545" target="_blank" rel="noreferrer"><span>Identity</span><strong>100,000 tinybar</strong><svg class="icon"><use href="#i-external"/></svg></a>
+        <a href="https://hashscan.io/testnet/transaction/0.0.7162784-1784839771-111800525" target="_blank" rel="noreferrer"><span>Flow</span><strong>200,000 tinybar</strong><svg class="icon"><use href="#i-external"/></svg></a>
+        <a href="https://hashscan.io/testnet/transaction/0.0.7162784-1784839773-705495394" target="_blank" rel="noreferrer"><span>Risk</span><strong>300,000 tinybar</strong><svg class="icon"><use href="#i-external"/></svg></a>
+      </div>
     </section>
 
     <section class="market shell section" id="market">
-      <div class="section-heading">
-        <div><span class="section-number">01</span><span class="eyebrow-label">Live tool market</span></div>
-        <h2>Three specialists.<br>Zero subscriptions.</h2>
-        <p>Every endpoint advertises an exact HBAR price over standard HTTP. The buyer chooses the smallest sufficient bundle.</p>
-      </div>
-      <div class="tool-grid" id="tool-grid" aria-live="polite">
-        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
-      </div>
+      <div class="section-heading"><div><span class="section-number">01</span><span class="eyebrow-label">Live tool market</span></div><h2>Three specialists.<br>Zero subscriptions.</h2><p>Every endpoint advertises an exact HBAR price over standard HTTP. The buyer chooses the smallest sufficient bundle.</p></div>
+      <div class="tool-grid" id="tool-grid" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
     </section>
 
     <section class="recorder shell section" id="recorder">
-      <div class="section-heading compact">
-        <div><span class="section-number">02</span><span class="eyebrow-label">Payment flight recorder</span></div>
-        <h2>Watch money become permission.</h2>
-        <p id="recorder-intro">Start a run to capture the complete machine-to-machine handshake.</p>
-      </div>
+      <div class="section-heading compact"><div><span class="section-number">02</span><span class="eyebrow-label">Payment flight recorder</span></div><h2>Watch money become permission.</h2><p id="recorder-intro">Start a run to capture the complete machine-to-machine handshake.</p></div>
       <div class="recorder-grid">
-        <div class="event-panel">
-          <div class="panel-head"><span>EVENT STREAM</span><span id="run-status">IDLE</span></div>
-          <ol class="event-list" id="event-list">
-            <li class="empty-state"><span>00</span><div><strong>Recorder armed</strong><p>Waiting for an autonomous procurement run.</p></div></li>
-          </ol>
-        </div>
-        <aside class="receipt-panel">
-          <div class="panel-head"><span>ON-CHAIN RECEIPTS</span><span>TESTNET</span></div>
-          <div id="receipt-list" class="receipt-list">
-            <div class="receipt-empty">Confirmed Hedera settlements will appear here with direct HashScan links.</div>
-          </div>
-          <div class="verdict" id="verdict-card" hidden>
-            <span>FINAL VERDICT</span><strong id="verdict-value">—</strong><p id="verdict-detail"></p>
-          </div>
-        </aside>
+        <div class="event-panel"><div class="panel-head"><span>EVENT STREAM</span><span id="run-status">IDLE</span></div><ol class="event-list" id="event-list"><li class="empty-state"><svg class="event-icon"><use href="#i-radar"/></svg><span>00</span><div><strong>Recorder armed</strong><p>Waiting for an autonomous procurement run.</p></div></li></ol></div>
+        <aside class="receipt-panel"><div class="panel-head"><span>ON-CHAIN RECEIPTS</span><span>TESTNET</span></div><div id="receipt-list" class="receipt-list"><div class="receipt-empty">Confirmed Hedera settlements will appear here with direct HashScan links.</div></div><div class="verdict" id="verdict-card" hidden><span>FINAL VERDICT</span><strong id="verdict-value">—</strong><p id="verdict-detail"></p></div></aside>
       </div>
     </section>
 
     <section class="architecture shell section">
-      <div class="section-heading compact">
-        <div><span class="section-number">03</span><span class="eyebrow-label">Why Hedera</span></div>
-        <h2>Micropayments without a checkout-shaped bruise.</h2>
-      </div>
+      <div class="section-heading compact"><div><span class="section-number">03</span><span class="eyebrow-label">Why Hedera</span></div><h2>Micropayments without a checkout-shaped bruise.</h2></div>
       <div class="architecture-line" aria-label="System architecture">
-        <div class="node"><span>01</span><strong>Buyer agent</strong><p>Discovers prices and enforces budget policy.</p></div>
-        <i>402</i>
-        <div class="node"><span>02</span><strong>Paid tool</strong><p>Returns evidence only after settlement.</p></div>
-        <i>verify</i>
-        <div class="node accent"><span>03</span><strong>Blocky402</strong><p>Co-signs, sponsors fees and submits.</p></div>
-        <i>settle</i>
-        <div class="node"><span>04</span><strong>Hedera</strong><p>Exact HBAR transfer with public finality.</p></div>
+        <div class="node"><svg class="node-icon"><use href="#i-radar"/></svg><span>01</span><strong>Buyer agent</strong><p>Discovers prices and enforces budget policy.</p></div><i>402</i>
+        <div class="node"><svg class="node-icon"><use href="#i-fingerprint"/></svg><span>02</span><strong>Paid tool</strong><p>Returns evidence only after settlement.</p></div><i>verify</i>
+        <div class="node accent"><svg class="node-icon"><use href="#i-verify"/></svg><span>03</span><strong>Blocky402</strong><p>Co-signs, sponsors fees and submits.</p></div><i>settle</i>
+        <div class="node"><svg class="node-icon"><use href="#i-network"/></svg><span>04</span><strong>Hedera</strong><p>Exact HBAR transfer with public finality.</p></div>
       </div>
       <div class="principles">
-        <article><span>NO CUSTODY</span><h3>The facilitator cannot invent the debit.</h3><p>The buyer signs the exact transfer. The facilitator only adds its fee-payer signature and submits it.</p></article>
-        <article><span>NO FAKE PROOF</span><h3>Result delivery follows settlement.</h3><p>The protected handler is buffered. A failed settlement replaces the result with a payment error.</p></article>
-        <article><span>NO BLACK BOX</span><h3>Every verdict returns its method.</h3><p>Risk signals are deterministic, weighted, and accompanied by the exact Mirror Node evidence URLs.</p></article>
+        <article><svg class="principle-icon"><use href="#i-lock"/></svg><span>NO CUSTODY</span><h3>The facilitator cannot invent the debit.</h3><p>The buyer signs the exact transfer. The facilitator only adds its fee-payer signature and submits it.</p></article>
+        <article><svg class="principle-icon"><use href="#i-receipt"/></svg><span>NO FAKE PROOF</span><h3>Result delivery follows settlement.</h3><p>The protected handler is buffered. A failed settlement replaces the result with a payment error.</p></article>
+        <article><svg class="principle-icon"><use href="#i-shield"/></svg><span>NO BLACK BOX</span><h3>Every verdict returns its method.</h3><p>Risk signals are deterministic, weighted, and accompanied by the exact Mirror Node evidence URLs.</p></article>
       </div>
     </section>
 
     <section class="machine shell section">
-      <div class="machine-copy">
-        <span class="section-number">04</span><h2>Agents don't need another dashboard.</h2><p>They need a protocol surface they can discover, negotiate and pay without human choreography.</p>
-        <div class="machine-links"><a href="/llms.txt">llms.txt ↗</a><a href="/openapi.json">openapi.json ↗</a><a href="/api/catalog">catalog.json ↗</a></div>
-      </div>
+      <div class="machine-copy"><span class="section-number">04</span><h2>Agents don't need another dashboard.</h2><p>They need a protocol surface they can discover, negotiate and pay without human choreography.</p><div class="machine-links"><a href="/llms.txt">llms.txt ↗</a><a href="/openapi.json">openapi.json ↗</a><a href="/api/catalog">catalog.json ↗</a></div></div>
       <pre><code><span class="comment"># 1. Discover</span>
 GET /api/catalog
 
@@ -152,13 +132,10 @@ PAYMENT-REQUIRED: eyJ4NDAy...
 <span class="comment"># 3. Sign exact HBAR transfer + retry</span>
 PAYMENT-SIGNATURE: eyJ4NDAy...
 <span class="ok">HTTP/1.1 200 OK</span>
-PAYMENT-RESPONSE: eyJzdWNjZXNzIjp0cnVl...</code></pre>
+PAYMENT-RESPONSE: eyJzdW...cnVl...</code></pre>
     </section>
   </main>
 
-  <footer class="shell">
-    <div><span class="brand-mark">S/402</span><p>Built for the Hedera x402 bounty.<br>Evidence on mainnet. Payments on testnet.</p></div>
-    <div class="footer-links"><a href="https://hedera.com/x402-bounty/">Bounty</a><a href="https://docs.hedera.com/solutions/ai/x402">Hedera docs</a><a href="https://github.com/kingtobi1337/sentinel402">Source</a></div>
-  </footer>
+  <footer class="shell"><div><span class="brand-mark">S/402</span><p>Built for the Hedera x402 bounty.<br>Evidence on mainnet. Payments on testnet.</p></div><div class="footer-links"><a href="https://hedera.com/x402-bounty/">Bounty</a><a href="https://docs.hedera.com/solutions/ai/x402">Hedera docs</a><a href="https://github.com/kingtobi1337/sentinel402">Source</a></div></footer>
 </body>
 </html>

@@ -1,4 +1,18 @@
 const $ = selector => document.querySelector(selector);
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+function icon(name, className = "icon") {
+  const svg = document.createElementNS(SVG_NS, "svg");
+  const use = document.createElementNS(SVG_NS, "use");
+  svg.setAttribute("class", className);
+  svg.setAttribute("aria-hidden", "true");
+  use.setAttribute("href", `#i-${name}`);
+  svg.append(use);
+  return svg;
+}
+
+const toolIcons = { identity: "fingerprint", flow: "flow", risk: "shield" };
+const phaseIcons = { payment: "ledger", complete: "verify", evidence: "fingerprint", error: "shield", plan: "radar", request: "flow" };
 
 const state = { health: null, catalog: null, run: null, pollTimer: null };
 
@@ -32,6 +46,8 @@ function renderCatalog(catalog) {
     const card = element("article", "tool-card");
     const id = element("div", "tool-id");
     id.append(element("span", "", `TOOL / 0${index + 1}`), element("span", "", "x402 exact"));
+    const visual = element("div", "tool-icon-wrap");
+    visual.append(icon(toolIcons[tool.id] || "radar", "tool-icon"));
     const title = element("h3", "", tool.name);
     const tagline = element("p", "tagline", tool.tagline);
     const description = element("p", "description", tool.description);
@@ -39,7 +55,7 @@ function renderCatalog(catalog) {
     const priceText = element("strong", "", `${tool.priceHbar} ℏ`);
     const unit = element("span", "", `${tool.priceTinybar} tinybar / result`);
     price.append(priceText, unit);
-    card.append(id, title, tagline, description, price);
+    card.append(id, visual, title, tagline, description, price);
     grid.append(card);
   });
 }
@@ -59,7 +75,7 @@ function renderEvents(run) {
     const number = element("span", "", "00");
     const body = element("div");
     body.append(element("strong", "", "Run queued"), element("p", "", "The procurement engine is waking up."));
-    li.append(number, body);
+    li.append(icon("radar", "event-icon"), number, body);
     list.append(li);
     return;
   }
@@ -68,7 +84,7 @@ function renderEvents(run) {
     const number = element("span", "", String(event.sequence).padStart(2, "0"));
     const body = element("div");
     body.append(element("strong", "", event.title), element("p", "", event.detail));
-    li.append(number, body);
+    li.append(icon(phaseIcons[event.phase] || "radar", "event-icon"), number, body);
     list.append(li);
   });
 }

@@ -14,6 +14,8 @@ Scroll to the live tool market.
 
 Show Identity Lens, Flow Lens and Risk Jury with exact tinybar prices.
 
+Briefly scroll through the eight-second protocol film. It previews the real flow without replacing the live payment proof: three evidence modules cross the verification gate and lock into one dossier.
+
 ## 0:45–1:05 — Protocol discovery
 
 Open `/api/catalog`, `/llms.txt` and `/openapi.json` quickly.
