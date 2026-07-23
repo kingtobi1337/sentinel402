@@ -1,0 +1,54 @@
+{
+  "marker": "E2E_TESTNET_OK",
+  "verifiedAt": "2026-07-23T20:15:08.219Z",
+  "resourceServer": "http://127.0.0.1:4021",
+  "protocol": "x402 v2 exact Hedera",
+  "paymentNetwork": "hedera:testnet",
+  "evidenceNetwork": "hedera:mainnet",
+  "buyerAccount": "0.0.9706295",
+  "receiverAccount": "0.0.9706314",
+  "purchases": [
+    {
+      "toolId": "identity",
+      "priceTinybar": "100000",
+      "transaction": "0.0.7162784@1784837688.343089555",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784837688-343089555",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "mirror": {
+        "mirrorUrl": "https://testnet.mirrornode.hedera.com/api/v1/transactions/0.0.7162784-1784837688-343089555",
+        "result": "SUCCESS",
+        "receiverCreditTinybar": "100000"
+      },
+      "resultSummary": "0.0.108869 is active with 4404.52435793 HBAR."
+    },
+    {
+      "toolId": "flow",
+      "priceTinybar": "200000",
+      "transaction": "0.0.7162784@1784837695.405790134",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784837695-405790134",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "mirror": {
+        "mirrorUrl": "https://testnet.mirrornode.hedera.com/api/v1/transactions/0.0.7162784-1784837695-405790134",
+        "result": "SUCCESS",
+        "receiverCreditTinybar": "200000"
+      },
+      "resultSummary": "0 transactions in 60 minutes; net 0 HBAR."
+    },
+    {
+      "toolId": "risk",
+      "priceTinybar": "300000",
+      "transaction": "0.0.7162784@1784837698.470813065",
+      "hashscanUrl": "https://hashscan.io/testnet/transaction/0.0.7162784-1784837698-470813065",
+      "payer": "0.0.9706295",
+      "network": "hedera:testnet",
+      "mirror": {
+        "mirrorUrl": "https://testnet.mirrornode.hedera.com/api/v1/transactions/0.0.7162784-1784837698-470813065",
+        "result": "SUCCESS",
+        "receiverCreditTinybar": "300000"
+      },
+      "resultSummary": "Deterministic risk verdict: LOW (0/100)."
+    }
+  ]
+}

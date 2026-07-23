@@ -2,6 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { loadConfig } from "../src/config.js";
 import { TOOL_DEFINITIONS, hashscanTransactionUrl } from "../src/domain.js";
 import { createBuyerHttpClient, purchaseTool } from "../src/payment.js";
+import { assertLivePaymentPreflight, type LiveHealth } from "../src/live-preflight.js";
 
 function canonicalTransactionId(transaction: string): string {
   const [account, timestamp] = transaction.split("@");
@@ -46,6 +47,8 @@ const serverUrl = process.env.E2E_SERVER_URL ?? config.publicBaseUrl;
 
 const health = await fetch(`${serverUrl}/api/health`, { signal: AbortSignal.timeout(10_000) });
 if (!health.ok) throw new Error(`resource server health returned HTTP ${health.status}`);
+const healthBody = await health.json() as LiveHealth;
+assertLivePaymentPreflight(healthBody, { network: config.hederaNetwork, payToAccount: config.payToAccount });
 
 const purchases = [];
 for (const tool of TOOL_DEFINITIONS) {

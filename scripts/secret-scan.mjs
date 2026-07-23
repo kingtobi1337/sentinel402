@@ -21,7 +21,7 @@ for (const path of candidates) {
   const lines = text.split("\n");
   lines.forEach((line, index) => {
     const privateKeyAssignment = /(?:PRIVATE_KEY|CLIENT_KEY)\s*=\s*([^\s#]+)/i.exec(line);
-    if (privateKeyAssignment && !/^(?:$|0\.0\.|your|changeme|xxxx|yyyy)/i.test(privateKeyAssignment[1])) {
+    if (privateKeyAssignment && !/^(?:$|\.\.\.|0\.0\.|your|changeme|xxxx|yyyy)/i.test(privateKeyAssignment[1])) {
       findings.push(`${path}:${index + 1}: non-empty private-key assignment`);
     }
     if (/\b(?:302e020100300506032b657004220420|3030020100300706052b8104000a04220420)[0-9a-f]{64,}\b/i.test(line)) {

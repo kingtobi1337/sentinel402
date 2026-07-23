@@ -41,7 +41,7 @@ let creationTransaction: string;
 try {
   const response = await new AccountCreateTransaction()
     .setECDSAKeyWithAlias(receiverKey.publicKey)
-    .setInitialBalance(new Hbar(20))
+    .setInitialBalance(new Hbar(2))
     .execute(client);
   creationTransaction = response.transactionId.toString();
   const receipt = await response.getReceipt(client);

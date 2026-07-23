@@ -62,7 +62,7 @@ export function loadConfig(): AppConfig {
     hederaNetwork: network,
     facilitatorUrl: httpUrl("FACILITATOR_URL", "https://api.testnet.blocky402.com", false),
     payToAccount,
-    mirrorUrl: httpUrl("HEDERA_MIRROR_URL", "https://mainnet.mirrornode.hedera.com/api/v1", false),
+    mirrorUrl: httpUrl("HEDERA_MIRROR_URL", "https://mainnet-public.mirrornode.hedera.com/api/v1", false),
     publicBaseUrl: httpUrl("PUBLIC_BASE_URL", `http://127.0.0.1:${port}`, true),
     internalBaseUrl: httpUrl("INTERNAL_BASE_URL", `http://127.0.0.1:${port}`, true),
     demoMaxBudgetTinybar: BigInt(budgetText),
