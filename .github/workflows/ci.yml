@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.1
+          cache: npm
+      - run: npm ci
+      - name: Full gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run check 2>&1 | tee /tmp/check.log
+          printf 'BUILD_GATE_OK\n' | tee -a /tmp/check.log
+          grep -qx 'BUILD_GATE_OK' /tmp/check.log
+      - run: npm run secret:scan
