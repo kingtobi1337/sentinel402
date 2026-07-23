@@ -1,0 +1,22 @@
+# Sentinel402 — Agent Interface
+
+Sentinel402 is an autonomous pay-per-evidence procurement service using x402 v2 on Hedera testnet.
+
+## Discovery
+GET /api/catalog
+GET /openapi.json
+
+## Paid tools
+GET /api/tools/identity?account=0.0.x
+GET /api/tools/flow?account=0.0.x
+GET /api/tools/risk?account=0.0.x
+
+Each paid endpoint responds with HTTP 402 and PAYMENT-REQUIRED. Register the official `@x402/hedera` exact client scheme for `hedera:*`, sign the exact HBAR transfer, then retry with PAYMENT-SIGNATURE. A successful response carries PAYMENT-RESPONSE with the Hedera testnet transaction id.
+
+## Autonomous demo
+POST /api/runs
+Content-Type: application/json
+
+{"account":"0.0.108869","depth":"deep","budgetTinybar":"1000000"}
+
+Poll the Location response header until status is completed or failed. Never send private keys to this service.

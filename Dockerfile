@@ -16,4 +16,4 @@ COPY --from=build --chown=sentinel:sentinel /app/package.json ./package.json
 USER sentinel
 EXPOSE 4021
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD wget -qO- http://127.0.0.1:4021/api/health >/dev/null || exit 1
-CMD ["node", "dist/server/index.js"]
+CMD ["node", "dist/src/server/index.js"]
