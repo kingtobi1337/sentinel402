@@ -7,6 +7,7 @@ Sentinel402 is a Hedera-native x402 procurement agent for pay-per-result account
 [![CI](https://github.com/kingtobi1337/sentinel402/actions/workflows/ci.yml/badge.svg)](https://github.com/kingtobi1337/sentinel402/actions/workflows/ci.yml)
 
 - **Live app:** https://sentinel402.iaped.in
+- **Full bounty demo (3:50):** https://sentinel402.iaped.in/demo.html
 - **Omni protocol film:** https://sentinel402.iaped.in/media/sentinel402-omni.mp4
 - **Agent discovery:** https://sentinel402.iaped.in/llms.txt
 - **OpenAPI:** https://sentinel402.iaped.in/openapi.json
@@ -37,6 +38,8 @@ Testnet participants:
 - Blocky402 fee payer: [`0.0.7162784`](https://hashscan.io/testnet/account/0.0.7162784)
 
 ## Payment flight recorder
+
+The complete narrated bounty demo is available at [`/demo.html`](https://sentinel402.iaped.in/demo.html). It records a real deep procurement run, all three x402 settlements, the resulting flight recorder, and public HashScan proof in three minutes and fifty seconds.
 
 The landing includes an original eight-second protocol film generated with fal.ai's Gemini Omni Flash model and a custom keyframe. It visualizes the same three-tool procurement path as the working demo: evidence modules, exact-payment verification, settlement receipts, and the final dossier.
 

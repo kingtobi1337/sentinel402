@@ -1,0 +1,23 @@
+Sentinel402 — Hedera x402 Bounty Demo
+
+Autonomous agents do not need another monthly API subscription. They often need one verified fact, right now, with a payment trail another machine can audit. Sentinel402 turns that requirement into an autonomous procurement flow built on x402 and Hedera.
+
+The live application exposes a market of three narrowly priced forensic tools. Identity Lens inspects account lifecycle, balance, key type, and staking metadata. Flow Lens reconstructs native value flow and counterparties. Risk Jury combines published deterministic signals into an explainable verdict. Each tool advertises an exact HBAR price, so the agent can choose the smallest evidence bundle that satisfies its goal and hard budget.
+
+This short protocol film visualizes the same real flow: three evidence modules cross a verification gate, settle, and lock into one dossier. Directly underneath are three production HashScan receipts from a completed deep run.
+
+Sentinel402 is also machine discoverable. The catalog exposes tool identifiers, prices, and endpoints. The llms dot txt file explains the procurement surface to another agent, while OpenAPI provides the typed request contract. There is no signup and no browser API key.
+
+Now I will run the live autonomous buyer against Hedera mainnet account zero point zero point one zero eight eight six nine. I select the deep policy, which requires all three tools, and cap total spending at six hundred thousand tinybar, or zero point zero zero six test HBAR.
+
+The browser sends only the investigation target, policy depth, and budget. The private key never enters the browser. The server first discovers the catalog and checks the policy. For each selected tool, the initial request receives HTTP four zero two Payment Required. The buyer constructs and signs the exact HBAR transfer. Blocky four zero two verifies the payment, adds the fee-payer signature, and settles it on Hedera testnet. Only after successful settlement does the protected endpoint return its evidence with HTTP two hundred.
+
+The payment flight recorder keeps this sequence visible rather than hiding it behind a spinner. Identity Lens settles for one hundred thousand tinybar. Flow Lens settles independently for two hundred thousand. Risk Jury settles for three hundred thousand. If verification, settlement, receiver validation, or the evidence request fails, the run stops and no unverified result is accepted.
+
+The completed dossier reports the purchased tools, total exact spend, deterministic verdict, and one on-chain receipt per result. Each receipt opens HashScan, where judges can independently verify the successful testnet transaction and the exact receiver credit.
+
+Hedera makes this model practical through predictable low fees, fast deterministic finality, and public verification. Evidence is read from Hedera mainnet Mirror Node data, while bounty payments settle separately on Hedera testnet. The facilitator sponsors network fees but cannot invent the buyer debit, because the buyer signs the exact value transfer.
+
+Sentinel402 demonstrates more than a single paywalled endpoint. It shows an autonomous agent discovering a tool market, applying a policy, purchasing multiple independent results, and aggregating them into one auditable decision.
+
+Discover. Decide. Pay. Prove. That is Sentinel402.

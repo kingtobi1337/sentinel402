@@ -1,5 +1,7 @@
 # Sentinel402 demo script — target 3:30
 
+Published demo: https://sentinel402.iaped.in/demo.html (final runtime: 3:50)
+
 ## 0:00–0:20 — Problem
 
 Show the landing hero.

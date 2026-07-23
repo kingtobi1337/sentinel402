@@ -18,7 +18,9 @@ https://sentinel402.iaped.in
 
 ## Demo video
 
-TBD — must be under five minutes.
+https://sentinel402.iaped.in/demo.html
+
+Runtime: 3:50. English narration. Includes a real deep run, three x402 payments, the payment flight recorder, and HashScan proof.
 
 ## HashScan proof
 
@@ -30,5 +32,4 @@ TBD — must be under five minutes.
 
 - Team member legal/display name
 - Team member email
-- Demo video URL
 - Optional product feedback ratings and comments
